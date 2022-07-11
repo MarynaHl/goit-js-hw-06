@@ -33,10 +33,22 @@ const cardListTemplate = ({ url, alt }) => {
   return `<li class="gallery-list">
         <img
           src="${url}",
-          alt="${alt}",
+          alt="${alt}" width = 380 height = 200,
         />
       </li>`;
 };
 const markup = images.map(cardListTemplate).join('');
 console.log(markup);
 contCardListItems.insertAdjacentHTML('beforeend', markup);
+
+
+
+// const imagesEl = document.querySelector('#gallery');
+
+// const createImageCards = images
+// .map(({url, alt}) => `<li style="list-style: none">
+// <img src="${url}" alt="${alt}" width = 380 height = 200/></li>`)
+// .join('');
+
+// imagesEl.insertAdjacentHTML('beforeend', createImageCards);
+// чомусь не працює
