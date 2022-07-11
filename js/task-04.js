@@ -14,19 +14,33 @@
 //  або зменшуй значення лічильника.
 // Оновлюй інтерфейс новим значенням змінної counterValue.
 
-let counterValue = 0;
-const decBtn = document.querySelector('button[data-action="decrement"]');
-const incBtn = document.querySelector('button[data-action="increment"]');
-const countClickEl = document.querySelector('#value');
+// let counterValue = 0;
+// const decBtn = document.querySelector('button[data-action="decrement"]');
+// const incBtn = document.querySelector('button[data-action="increment"]');
+// const countClickEl = document.querySelector('#value');
 
-decBtn.addEventListener('click', onDecBtnClick);
-function onDecBtnClick() {
-  counterValue -= 1;
-  console.log((countClickEl.textContent = counterValue));
-}
+// decBtn.addEventListener('click', onDecBtnClick);
+// function onDecBtnClick() {
+//   counterValue -= 1;
+//   console.log((countClickEl.textContent = counterValue));
+// }
 
-incBtn.addEventListener('click', onIncBtnClick);
-function onIncBtnClick() {
-  counterValue += 1;
-  console.log((countClickEl.textContent = counterValue));
-}
+// incBtn.addEventListener('click', onIncBtnClick);
+// function onIncBtnClick() {
+//   counterValue += 1;
+//   console.log((countClickEl.textContent = counterValue));
+// }
+
+const counter = document.querySelector('#counter');
+const counterValue = document.querySelector('#value');
+const buttonDecrement = document.querySelector('[data-action="decrement"]');
+const buttonIncrement = document.querySelector('[data-action="increment"]');
+
+function onButtonDecrementClick (){
+    counterValue.textContent = Number(counterValue.textContent)-1;
+};
+function onButtonIncrementClick (){
+    counterValue.textContent = Number(counterValue.textContent)+1;
+};
+buttonDecrement.addEventListener('click', onButtonDecrementClick);
+buttonIncrement.addEventListener('click', onButtonIncrementClick);
