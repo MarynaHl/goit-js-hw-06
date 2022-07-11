@@ -9,10 +9,19 @@
 // <span id="text">Abracadabra!</span>
 
 
-const fontSizeEl = document.querySelector('#font-size-control');
-const textEl = document.querySelector('#text');
+const inputBtn = document.querySelector('input#font-size-control');
+const textString = document.querySelector('span#text');
 
-fontSizeEl.addEventListener('input', onInputChange);
+    inputBtn.addEventListener('input', onInputBtnChange);
+    textString.style.fontSize = `${inputBtn.value}px`;
+function onInputBtnChange(event) {
+    textString.style.fontSize = `${inputBtn.value}px`;
+}
+// // 
+// const fontSizeEl = document.querySelector('#font-size-control');
+// const textEl = document.querySelector('#text');
 
-function onInputChange({currentTarget}){
-    text.setAttribute('style', `font-size: ${currentTarget.value}px`);
+// fontSizeEl.addEventListener('input', onInputChange);
+
+// function onInputChange({currentTarget}){
+//     text.setAttribute('style', `font-size: ${currentTarget.value}px`);
