@@ -28,5 +28,5 @@ function onDecBtnClick() {
 incBtn.addEventListener('click', onIncBtnClick);
 function onIncBtnClick() {
   counterValue += 1;
-  console.log((countClickEl.textContent = counterValue);
+  console.log((countClickEl.textContent = counterValue));
 }
