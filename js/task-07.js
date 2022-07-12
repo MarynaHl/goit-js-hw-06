@@ -9,19 +9,19 @@
 // <span id="text">Abracadabra!</span>
 
 
-const inputBtn = document.querySelector('input#font-size-control');
-const textString = document.querySelector('span#text');
+// const inputBtn = document.querySelector('input#font-size-control');
+// const textString = document.querySelector('span#text');
 
-    inputBtn.addEventListener('input', onInputBtnChange);
-    textString.style.fontSize = `${inputBtn.value}px`;
-function onInputBtnChange(event) {
-    textString.style.fontSize = `${inputBtn.value}px`;
-}
-// // 
-// const fontSizeEl = document.querySelector('#font-size-control');
-// const textEl = document.querySelector('#text');
+//     inputBtn.addEventListener('input', onInputBtnChange);
+//     textString.style.fontSize = `${inputBtn.value}px`;
+// function onInputBtnChange(event) {
+//     textString.style.fontSize = `${inputBtn.value}px`;
+// }
+// 
+const fontSizeEl = document.querySelector('#font-size-control');
+const textEl = document.querySelector('#text');
 
-// fontSizeEl.addEventListener('input', onInputChange);
+fontSizeEl.addEventListener('input', onInputChange);
 
-// function onInputChange({currentTarget}){
-//     text.setAttribute('style', `font-size: ${currentTarget.value}px`);
+function onInputChange({currentTarget}){
+    text.setAttribute('style', `font-size: ${currentTarget.value}px`);
