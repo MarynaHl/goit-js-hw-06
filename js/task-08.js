@@ -2,6 +2,7 @@ const formBtnEl = document.querySelector(".login-form");
 
 const handleSubmit = (event) => {
     event.preventDefault();
+    
     const {
     elements: { email, password }
     } = event.currentTarget;

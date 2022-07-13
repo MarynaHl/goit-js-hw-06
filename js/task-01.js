@@ -1,4 +1,3 @@
-
 const CategoriesEl = document.querySelectorAll('li.item');
 console.log(`Number of categories: ${CategoriesEl.length}`);
 
