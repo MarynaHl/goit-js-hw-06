@@ -1,44 +1,22 @@
-// Напиши скрипт управління формою логіна.
+const formBtnEl = document.querySelector(".login-form");
 
-// <form class="login-form">
-//   <label>
-//     Email
-//     <input type="email" name="email" />
-//   </label>
-//   <label>
-//     Password
-//     <input type="password" name="password" />
-//   </label>
-//   <button type="submit">Login</button>
-// </form>
-// Обробка відправлення форми form.login-form повинна відбуватися 
-// відповідно до події submit.
-// Під час відправлення форми сторінка не повинна перезавантажуватися.
-// Якщо у формі є незаповнені поля, виводь alert з попередженням про те, 
-// що всі поля повинні бути заповнені.
-// Якщо користувач заповнив усі поля і відправив форму, збери значення полів в
-//  об'єкт, де ім'я поля буде ім'ям властивості, а значення поля - значенням 
-//  властивості. Для доступу до елементів форми використовуй властивість elements.
-// Виведи об'єкт із введеними даними в консоль і очисти
-//  значення полів форми методом reset.
-
-const refs = {
-    loginFormRef: document.querySelector('.login-form'),
-}
-
-refs.loginFormRef.addEventListener('submit', processingLoginForm)
-
-function processingLoginForm(event) {
+const handleSubmit = (event) => {
     event.preventDefault();
-    const formElementsRef = event.currentTarget.elements
-    const mail = formElementsRef.email.value;
-    const password = formElementsRef.password.value;
-    if (mail == "" || password == "") {
-        alert('Всі поля треба заповнити')
-    } else {
-        const formData = { mail, password } 
-        console.log(formData);
-        formElementsRef.email.value = '';
-        formElementsRef.password.value = '';
-    }
+    const {
+    elements: { email, password }
+    } = event.currentTarget;
+    
+if (email.value === "" || password.value === "") {
+return alert("Please, complete all fields");
 }
+    const objForm = {
+        email: email.value,
+        password: password.value,
+} 
+    console.log(objForm);
+
+    event.currentTarget.reset();
+    
+}
+
+formBtnEl.addEventListener("submit", handleSubmit);
