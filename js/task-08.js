@@ -7,7 +7,7 @@ const handleSubmit = (event) => {
     } = event.currentTarget;
     
 if (email.value === "" || password.value === "") {
-return alert("Please, complete all fields");
+return alert('Please, complete all fields');
 }
     const objForm = {
         email: email.value,
